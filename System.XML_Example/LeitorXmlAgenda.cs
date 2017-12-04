@@ -2,20 +2,16 @@
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
+using System.XML_Example.Model;
 
 namespace System.XML_Example
 {
-    public class LeitorXmlAgenda
+    public static class LeitorXmlAgenda
     {
-
         static string arquivo = @"C:\Estudos\NET\Agenda.xml";
         static XmlDocument xmlDoc = new XmlDocument();
         static XElement xDoc;
         static Contatos contatos;
-
-        public LeitorXmlAgenda()
-        {
-        }
 
         public static Contatos Read()
         {
@@ -46,6 +42,5 @@ namespace System.XML_Example
                 xmlDoc.Save(arquivo);
             }
         }
-
     }
 }

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.XML_Example.Model;
 
 namespace System.XML_Example
 {

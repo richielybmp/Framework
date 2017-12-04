@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using System.XML_Example.Model;
+using System.XML_Example.Model.Enumeradores;
 
 namespace System.XML_Example
 {
@@ -136,12 +138,12 @@ namespace System.XML_Example
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            FormBuscar f4 = new FormBuscar();
-            f4.FormClosed += f4_FormClosed;
-            f4.ShowDialog();
+            FormBuscar formBuscar = new FormBuscar();
+            formBuscar.FormClosed += formBuscar_FormClosed;
+            formBuscar.ShowDialog();
         }
 
-        void f4_FormClosed(object sender, FormClosedEventArgs e)
+        void formBuscar_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (FiltroContatos.Filtro.Count > 0)
             {

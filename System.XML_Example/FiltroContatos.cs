@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.XML_Example.Model;
 
 namespace System.XML_Example
 {
@@ -12,12 +9,13 @@ namespace System.XML_Example
 
         public static List<Contato> Filtro
         {
-            get {
+            get
+            {
                 //Singleton
                 if (filtro == null)
                     filtro = new List<Contato>();
 
-                return filtro; 
+                return filtro;
             }
             set { filtro = value; }
         }
