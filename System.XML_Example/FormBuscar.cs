@@ -23,10 +23,10 @@ namespace System.XML_Example
             {
                 resultado = contatos.ListaDeContatos.Where(p => p.Nome.Contains(txtBusca.Text)).ToList<Contato>();
             }
-            //else if (cmbCampo.Text == "Telefone")
-            //{
-            //    resultado = contatos.ListaDeContatos.FindAll(c => c.ListaDeTelefones.Where(tel => tel.Numero.Contains(cmbCampo.Text))).ToList<Contato>();
-            //}
+            else if (cmbCampo.Text == "Telefone")
+            {
+                resultado = contatos.ListaDeContatos.Where(ct => ct.ListaDeTelefones.All(tel => tel.Numero.Contains(txtBusca.Text))).ToList<Contato>();
+            }
 
             FiltroContatos.Filtro = resultado;
             this.Close();
